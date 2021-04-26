@@ -199,6 +199,7 @@ html {
 	padding: 0 0.5em;
 	font-weight: 300;
 	text-align: center;
+	padding-bottom: 0.5em;
 	color: rgb(255, 255, 255);
 	background: var(--c-black);
 	line-height: 68px;
@@ -484,11 +485,19 @@ html {
 }
 .fittings__btn {
 	background: var(--c-beige);
+	position: relative;
 	padding: 1em 3em;
 	border: none;
 	font-size: 1rem;
 	font-weight: 600;
 	cursor: pointer;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+	z-index: 5;
+	transition: 0.4s;
+}
+.fittings__btn:hover {
+	box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
+	color: rgb(255, 255, 255);
 }
 .section__title-bold {
 	text-transform: uppercase;
@@ -1188,7 +1197,8 @@ html {
 	    padding: 1em;
 	}
 	.section__title {
-	    font-size: 1.3rem;
+	    font-size: 1.2rem;
+	    line-height: 2;
 	}
 	.veneered__left {
 	    flex: 1 1 100%;
