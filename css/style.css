@@ -106,6 +106,9 @@ html {
 	list-style: none;
 	flex-wrap: nowrap;
 }
+.sub-menu__inner_opacity {
+	opacity: 1 !important;
+}
 .sub-menu__item {
 	display: flex;
 	position: relative;
@@ -173,9 +176,6 @@ html {
 	text-transform: uppercase;
 	color: var(--c-black);
 	font-size: 0.7rem;
-}
-.sub-menu__inner.hover {
-	display: flex;
 }
 .burger {
 	display: none;
