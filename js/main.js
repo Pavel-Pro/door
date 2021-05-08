@@ -28,28 +28,6 @@
 			$('.header').removeClass('fixed');
 		}
 	});
-	// $('.header-menu__item.dropdown').on('mouseover', function() {
-	// 	console.log('mouseover');
-	// 	$(this).children('.sub-menu__inner').show();
-	// });
-	// $('.header-menu__item.dropdown').on('mouseout', function() {
-	// 	// $(this).children('.sub-menu__inner').delay(7000).removeClass('hover');
-	// 	console.log('mouseout');
-	// 	// $(this).children('.sub-menu__inner').delay(1000).hide();
-	// 	function hideFunc() {
-	// 		console.log('setTimeout');
-	// 		$('.header-menu__item.dropdown').children('.sub-menu__inner').hide()
-	// 	}
-	// 	setTimeout(hideFunc, 5000);
-	// });
-	// $('.sub-menu__inner').on('mouseover', function() {
-	// 	console.log('mouseover');
-	// 	$(this).show();
-	// });
-	// $('.sub-menu__inner').on('mouseout', function() {
-	// 	console.log('mouseout');
-	// 	$(this).hide();
-	// });
 	$('.header-menu__item.dropdown').hover(function(){
 		if($(this).children('.sub-menu__inner').is(':visible')){
 			$(this).children('.sub-menu__inner').addClass('sub-menu__inner_opacity');

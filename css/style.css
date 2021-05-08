@@ -62,19 +62,17 @@ html {
 }
 .dropdown {
 	display: block;
+	width: 3.3em;
 }
-.dropdown:after {
-	content: "\276F";
-	vertical-align: top;
-	position: absolute;
-    top: 41%;
-    left: 39%;
-    font-size: 0.6rem;
-    font-weight: 100;
-    transform: rotate(90deg);
+.dropdown__arrows {
+	display: block;
+	font-size: 0.6rem;
+	float: right;
+	margin-left: 0.5em;
+	transform: rotate(90deg);
     transition: 0.3s;
 }
-.dropdown:hover:after {
+.dropdown:hover .dropdown__arrows {
 	transform: rotate(-90deg);
 } 
 .header-menu__link {
@@ -82,7 +80,7 @@ html {
 	text-decoration: none;
 	color: var(--c-black);
 	display: block;
-	transition: text-shadow .3s
+	transition: text-shadow .3s;
 }
 .header-menu__link:hover {
     text-shadow: 0 0 .65px var(--c-black), 0 0 .65px var(--c-black);
@@ -100,14 +98,14 @@ html {
 	height: 280px;
 	z-index: 7;
 }
+.sub-menu__inner_opacity {
+	opacity: 1 !important;
+}
 .sub-menu__items {
 	display: flex;
 	justify-content: center;
 	list-style: none;
 	flex-wrap: nowrap;
-}
-.sub-menu__inner_opacity {
-	opacity: 1 !important;
 }
 .sub-menu__item {
 	display: flex;
@@ -157,8 +155,10 @@ html {
 }
 .sub-menu-bottom {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
+	align-items: center;
 	margin-top: 2.5em;
+	padding: 0 4em;
 	list-style: none;
 	max-width: 100%;
 	flex-wrap: nowrap;
@@ -166,7 +166,8 @@ html {
 .sub-menu-bottom__item {
 	border-left: 1px solid var(--c-black);
 	margin-bottom: 1em;
-	padding: 0 3em;
+	flex-grow: 1;
+	text-align: center;
 }
 .sub-menu-bottom__item:last-child {
 	border-right: 1px solid var(--c-black);
@@ -976,6 +977,23 @@ html {
 		transition: 0.4s;
 		z-index: 3;
 	}
+	.dropdown {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	    width: auto;
+	}
+	.dropdown__arrows {
+	    margin-left: 0;
+	    margin-right: 0.5em;
+	    display: none; 
+	}
+	.sub-menu__inner {
+		display: none;
+	}
+	.sub-menu-bottom {
+	     display: none;
+	}
 	.header__right {
 	    margin-left: 0;
 	    width: 12.5em;
@@ -1254,6 +1272,9 @@ html {
 	}
 	.burger__item-bottom {
 		transform: rotate(47deg) translateX(-3px) translateY(-1px);
+	}
+	.dropdown {
+		justify-content: center;
 	}
 	.main__items {
 	    flex-direction: column;
